@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [ольга печенюк](https://up.htmlacademy.ru/javascript/26/user/1853163).
-* Наставник: `Неизвестно`.
+* Наставник: [Анастасия Васинская](https://htmlacademy.ru/profile/vanastasiyagit).
 
 ---
 
