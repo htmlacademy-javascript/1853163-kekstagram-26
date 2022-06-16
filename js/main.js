@@ -15,7 +15,7 @@ const checkStringLength = (string, maxLength) => string.length < maxLength;
 
 checkStringLength('jfvdkjdknldfmlv', 16);
 
-const commentsNameArray = [
+const COMMENTS_NAME_ARRAY = [
   'Liam', 'Olivia',
   'Noah', 'Emma',
   'Oliver', 'Charlotte',
@@ -28,7 +28,7 @@ const commentsNameArray = [
   'Theodore', 'Harper'
 ];
 
-const commentsTextArray = [
+const COMMENTS_TEXT_ARRAY = [
   'Всё отлично!',
   'В целом всё неплохо. Но не всё.',
   'Когда вы делаете фотографию, хорошо бы убирать палец из кадра.', 'В конце концов это просто непрофессионально.',
@@ -51,8 +51,8 @@ const createCommentsArray = () => {
 
   for (let i = 0; i < numberOfComments; i++) {
     const comment = {
-      text: getRandomValueFromArray(commentsTextArray),
-      name: getRandomValueFromArray(commentsNameArray),
+      text: getRandomValueFromArray(COMMENTS_TEXT_ARRAY),
+      name: getRandomValueFromArray(COMMENTS_NAME_ARRAY),
       avatar: `img/avatar-${getRandomIntInclusive(1, 6)}.svg`,
       id: lastId++,
     };
