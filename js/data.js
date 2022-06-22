@@ -1,4 +1,4 @@
-import {getRandomIntInclusive, getRandomValueFromArray} from './util';
+import {getRandomIntInclusive, getRandomValueFromArray} from './util.js';
 
 const COMMENTS_NAME_ARRAY = [
   'Liam', 'Olivia',
@@ -60,4 +60,4 @@ const createPhotosDescriptionArray = () => {
   return result;
 };
 
-createPhotosDescriptionArray();
+export {createPhotosDescriptionArray};
