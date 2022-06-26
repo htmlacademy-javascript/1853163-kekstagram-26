@@ -1,5 +1,5 @@
 import {createPhotosDescriptionArray} from './data.js';
-import {openPicture} from './openPhoto.js';
+import {openPicture} from './open-photo.js';
 
 const photoContainer = document.querySelector('.pictures');
 const photoTemplate = document.querySelector('#picture').content;
