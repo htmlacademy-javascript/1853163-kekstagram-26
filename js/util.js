@@ -17,6 +17,6 @@ const getRandomValueFromArray = (arr) => {
 
 const checkStringLength = (string, maxLength) => string.length < maxLength;
 
-checkStringLength('jfvdkjdknldfmlv', 16);
+const isEscKeydown = (evt) => evt.key === 'Escape';
 
-export{getRandomIntInclusive,  getRandomValueFromArray};
+export{getRandomIntInclusive,  getRandomValueFromArray, checkStringLength, isEscKeydown};
