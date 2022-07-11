@@ -1,4 +1,4 @@
-import {isEscKeydown} from "./util.js";
+import {isEscKeydown} from './util.js';
 
 const body = document.querySelector('body');
 const bigPicture = document.querySelector('.big-picture');
@@ -10,11 +10,11 @@ const closePictureHandler = () => {
   document.removeEventListener('keydown', pictureEscapeHandler);
 };
 
-const pictureEscapeHandler = (evt) => {
+function pictureEscapeHandler(evt) {
   if (isEscKeydown(evt)) {
     closePictureHandler();
   }
-};
+}
 
 bigPictureCloseBtn.addEventListener('click', closePictureHandler);
 

@@ -1,4 +1,4 @@
-import {checkStringLength, isEscKeydown} from "./util.js";
+import {checkStringLength, isEscKeydown} from './util.js';
 
 const body = document.querySelector('body');
 const imgUploadOverlay = document.querySelector('.img-upload__overlay');
@@ -15,11 +15,11 @@ const closeImgFormHandler = () => {
   imgUploadForm.reset();
 };
 
-const escapeImgFormHandler = (evt) => {
+function escapeImgFormHandler(evt) {
   if (isEscKeydown(evt)) {
     closeImgFormHandler();
   }
-};
+}
 
 const blockEscForFocused = (evt) => {
   if (isEscKeydown(evt)) {
@@ -55,9 +55,7 @@ const pristine = new Pristine(imgUploadForm, {
 
 const getHashTagsArrayFromString = (hashTagsString) => hashTagsString.toLowerCase().trim().split(' ');
 
-const isCommentValid = (value) => {
-  return checkStringLength(value, COMMENTS_LENGTH_MAX);
-};
+const isCommentValid = (value) => checkStringLength(value, COMMENTS_LENGTH_MAX);
 
 const isHashTagsValid = (value) => {
   const regExp = /^#[A-Za-zА-Яа-яЁё0-9]{1,19}$/;
