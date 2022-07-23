@@ -75,7 +75,7 @@ const createCommentsFragment = (commentsArray, commentTemplate) => {
     newCommentsFragment.appendChild(currentEl);
   });
 
-  return newCommentsFragment
+  return newCommentsFragment;
 };
 
 export {createPhotosDescriptionArray, createCommentsFragment};

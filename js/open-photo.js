@@ -1,6 +1,5 @@
 import {isEscKeydown} from './util.js';
-
-import {createCommentsFragment} from "./data.js";
+import {createCommentsFragment} from './data.js';
 
 const body = document.querySelector('body');
 const bigPicture = document.querySelector('.big-picture');
@@ -74,7 +73,7 @@ const openPicture = (pictureData) => {
     }
   };
 
-  commentsLoader.addEventListener('click', loadMoreCommentsHandler)
+  commentsLoader.addEventListener('click', loadMoreCommentsHandler);
 };
 
 bigPictureCloseBtn.addEventListener('click', closePictureHandler);
