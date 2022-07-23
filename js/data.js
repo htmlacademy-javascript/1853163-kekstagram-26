@@ -23,10 +23,11 @@ const COMMENTS_TEXT_ARRAY = [
 ];
 
 let lastId = 1;
+const MAX_AMOUNT_OF_COMMENTS = 15;
 
 const createCommentsArray = () => {
   const commentsArray = [];
-  const numberOfComments = getRandomIntInclusive(1, 3);
+  const numberOfComments = getRandomIntInclusive(1, MAX_AMOUNT_OF_COMMENTS);
 
   for (let i = 0; i < numberOfComments; i++) {
     const comment = {
@@ -60,4 +61,21 @@ const createPhotosDescriptionArray = () => {
   return result;
 };
 
-export {createPhotosDescriptionArray};
+const createCommentsFragment = (commentsArray, commentTemplate) => {
+  const newCommentsFragment = document.createDocumentFragment();
+  commentsArray.forEach(({avatar, name, text}) => {
+
+    const currentEl = commentTemplate.cloneNode(true);
+    const currentImg = currentEl.querySelector('.social__picture');
+    currentImg.src = avatar;
+    currentImg.alt = name;
+    const currentText = currentEl.querySelector('.social__text');
+    currentText.textContent = text;
+
+    newCommentsFragment.appendChild(currentEl);
+  });
+
+  return newCommentsFragment;
+};
+
+export {createPhotosDescriptionArray, createCommentsFragment};
