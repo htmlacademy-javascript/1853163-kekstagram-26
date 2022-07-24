@@ -19,4 +19,6 @@ const checkStringLength = (string, maxLength) => string.length < maxLength;
 
 const isEscKeydown = (evt) => evt.key === 'Escape';
 
-export{getRandomIntInclusive,  getRandomValueFromArray, checkStringLength, isEscKeydown};
+const getNumWithPercentage = (num) => `${num}%`;
+
+export{getRandomIntInclusive,  getRandomValueFromArray, checkStringLength, isEscKeydown, getNumWithPercentage};
